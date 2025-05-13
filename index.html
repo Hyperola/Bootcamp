@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Novaspire Tech Bootcamp | Hustle Hard, Code Easy</title>
+  <!-- Tailwind + Fonts + Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <style>
+    /* Custom Army Green Palette */
+    :root {
+      --novaspire: #4B7043;
+      --novaspire-light: #6B8F64;
+      --novaspire-dark: #2A4A23;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    h1, h2, h3, .font-poppins {
+      font-family: 'Poppins', sans-serif;
+    }
+    /* Glowing Timer */
+    @keyframes glow {
+      0% { box-shadow: 0 0 5px rgba(75, 112, 67, 0.5); }
+      50% { box-shadow: 0 0 20px rgba(75, 112, 67, 0.8); }
+      100% { box-shadow: 0 0 5px rgba(75, 112, 67, 0.5); }
+    }
+    .glow-timer {
+      animation: glow 2s infinite;
+    }
+    /* Emoji Float */
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    .emoji-float {
+      animation: float 3s ease-in-out infinite;
+    }
+    /* Scroll Fade-In */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- Navbar -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="#" class="text-2xl font-poppins font-bold text-[var(--novaspire)] flex items-center">
+        <span class="emoji-float">🚀</span> <span class="ml-2">Novaspire</span>
+      </a>
+      <div class="hidden md:flex space-x-8 items-center">
+        <a href="#home" class="hover:text-[var(--novaspire)] font-semibold">Home</a>
+        <a href="#freeweek" class="hover:text-[var(--novaspire)] font-semibold">Free Week</a>
+        <a href="#courses" class="hover:text-[var(--novaspire)] font-semibold">Courses</a>
+        <a href="#internship" class="hover:text-[var(--novaspire)] font-semibold">Internship</a>
+        <a href="#why" class="hover:text-[var(--novaspire)] font-semibold">Why Novaspire</a>
+        <a href="#parents" class="hover:text-[var(--novaspire)] font-semibold">Parents</a>
+        <a href="#faq" class="hover:text-[var(--novaspire)] font-semibold">FAQ</a>
+        <a href="#register" class="bg-[var(--novaspire)] text-white px-6 py-2 rounded-full font-bold hover:bg-[var(--novaspire-dark)] transition-all">Join Free</a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden text-2xl">☰</button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 px-4">
+      <a href="#home" class="block py-2 hover:text-[var(--novaspire)]">Home</a>
+      <a href="#freeweek" class="block py-2 hover:text-[var(--novaspire)]">Free Week</a>
+      <a href="#courses" class="block py-2 hover:text-[var(--novaspire)]">Courses</a>
+      <a href="#internship" class="block py-2 hover:text-[var(--novaspire)]">Internship</a>
+      <a href="#why" class="block py-2 hover:text-[var(--novaspire)]">Why Novaspire</a>
+      <a href="#parents" class="block py-2 hover:text-[var(--novaspire)]">Parents</a>
+      <a href="#faq" class="block py-2 hover:text-[var(--novaspire)]">FAQ</a>
+      <a href="#register" class="block bg-[var(--novaspire)] text-white px-4 py-2 rounded-full mt-2 text-center">Register</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative h-screen flex items-center justify-center bg-[var(--novaspire-dark)] overflow-hidden">
+    <div class="absolute inset-0 bg-black opacity-40"></div>
+    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=60" 
+         alt="Tech Team" class="absolute w-full h-full object-cover">
+    <div class=" Klingbeil text-center px-4">
+      <h1 class="text-4xl md:text-6xl font-poppins font-bold text-white mb-6 fade-in">
+        <span class="text-yellow-400">From JAMBite</span> <br>to <span class="text-[var(--novaspire-light)]">Tech Pro</span> 💻
+      </h1>
+      <p class="text-xl text-white mb-8 max-w-2xl mx-auto fade-in">
+        Free 7-day online bootcamp. Army green cert for all. <span class="font-bold">One hustler gets a paid internship!</span>
+      </p>
+      <div class="fade-in">
+        <a href="#register" class="bg-yellow-400 text-[var(--novaspire-dark)] px-8 py-4 rounded-full font-bold hover:bg-yellow-300 text-lg animate__animated animate__pulse animate__infinite">
+          🚀 Claim Your Free Spot
+        </a>
+        <p class="text-white mt-4 text-sm">🔥 <span id="live-count">1,243</span> students already registered!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trusted By -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-poppins text-center mb-12 fade-in">Backed by the OGs:</h2>
+      <div class="flex flex-wrap justify-center items-center gap-12 fade-in">
+        <img src="https://via.placeholder.com/150x60/4B7043/FFFFFF?text=J+Flash" alt="J Flash" class="h-12 hover:scale-105 transition">
+        <img src="https://via.placeholder.com/150x60/4B7043/FFFFFF?text=Quaducate" alt="Quaducate" class="h-12 hover:scale-105 transition">
+        <img src="https://via.placeholder.com/150x60/4B7043/FFFFFF?text=Fabulous" alt="Fabulous" class="h-12 hover:scale-105 transition">
+      </div>
+    </div>
+  </section>
+
+  <!-- Countdown Timer -->
+  <section class="py-12 bg-gradient-to-r from-[var(--novaspire-dark)] to-[var(--novaspire)] text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-poppins font-bold mb-6 fade-in">⏳ Free Week Starts In:</h2>
+      <div id="countdown" class="flex justify-center gap-4 text-4xl font-bold mb-8 fade-in glow-timer rounded-lg p-6 max-w-2xl mx-auto bg-[var(--novaspire-light)]">
+        <div><span id="days">00</span> <span class="text-sm">Days</span></div>
+        <div>:</div>
+        <div><span id="hours">00</span> <span class="text-sm">Hrs</span></div>
+        <div>:</div>
+        <div><span id="minutes">00</span> <span class="text-sm">Min</span></div>
+        <div>:</div>
+        <div><span id="seconds">00</span> <span class="text-sm">Sec</span></div>
+      </div>
+      <p class="fade-in">⌛ Don’t miss your army green cert!</p>
+    </div>
+  </section>
+
+  <!-- Free Week Cards -->
+  <section id="freeweek" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-poppins font-bold text-center mb-4 fade-in">What’s in the <span class="text-[var(--novaspire)]">Free Week?</span> 🤔</h2>
+      <p class="text-center text-gray-600 mb-12 max-w-watermark fade-in">Zero boring theory—just <span class="font-bold">hands-on hustle!</span> Online classes.</p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition fade-in hover:border-2 hover:border-[var(--novaspire)]">
+          <div class="bg-[var(--novaspire)] text-white w-14 h-14 rounded-full flex items-center justify-center mb-4 mx-auto emoji-float">
+            <span class="text-2xl">👨‍💻</span>
+          </div>
+          <h3 class="font-poppins font-bold text-xl text-center mb-2">HTML/CSS</h3>
+          <p class="text-gray-600 text-center">Build your first webpage in <strong>48 hours</strong>.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition fade-in hover:border-2 hover:border-[var(--novaspire)]" style="transition-delay: 0.1s;">
+          <div class="bg-[var(--novaspire)] text-white w-14 h-14 rounded-full flex items-center justify-center mb-4 mx-auto emoji-float">
+            <span class="text-2xl">🐍</span>
+          </div>
+          <h3 class="font-poppins font-bold text-xl text-center mb-2">Python</h3>
+          <p class="text-gray-600 text-center">Automate tasks <strong>like a boss</strong>.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition fade-in hover:border-2 hover:border-[var(--novaspire)]" style="transition-delay: 0.2s;">
+          <div class="bg-[var(--novaspire)] text-white w-14 h-14 rounded-full flex items-center justify-center mb-4 mx-auto emoji-float">
+            <span class="text-2xl">🎨</span>
+          </div>
+          <h3 class="font-poppins font-bold text-xl text-center mb-2">UI/UX</h3>
+          <p class="text-gray-600 text-center">Design apps <strong>that don’t suck</strong>.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition fade-in hover:border-2 hover:border-[var(--novaspire)]" style="transition-delay: 0.3s;">
+          <div class="bg-[var(--novaspire)] text-white w-14 h-14 rounded-full flex items-center justify-center mb-4 mx-auto emoji-float">
+            <span class="text-2xl">📊</span>
+          </div>
+          <h3 class="font-poppins font-bold text-xl text-center mb-2">Data Analysis</h3>
+          <p class="text-gray-600 text-center">Turn numbers into <strong>$$$ insights</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Choose Your Path -->
+  <section id="courses" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-poppins font-bold text-center mb-4 fade-in">Choose Your <span class="text-[var(--novaspire)]">Tech Path</span> 🚀</h2>
+      <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto fade-in">Pick your vibe after the free week and earn your <strong>army green Novaspire certificate!</strong></p>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-xl transition fade-in">
+          <h3 class="font-poppins font-bold text-xl mb-2">Frontend Dev</h3>
+          <p class="text-gray-600">Build stunning websites with HTML, CSS, JavaScript, React, Tailwind. <strong>Get a Frontend Certificate!</strong></p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-xl transition fade-in" style="transition-delay: 0.1s;">
+          <h3 class="font-poppins font-bold text-xl mb-2">Backend Dev</h3>
+          <p class="text-gray-600">Power apps with Python and Flask. <strong>Get a Backend Certificate!</strong></p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-xl transition fade-in" style="transition-delay: 0.2s;">
+          <h3 class="font-poppins font-bold text-xl mb-2">UI/UX Design</h3>
+          <p class="text-gray-600">Design user-friendly apps and sites. <strong>Get a UI/UX Certificate!</strong></p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-xl transition fade-in" style="transition-delay: 0.3s;">
+          <h3 class="font-poppins font-bold text-xl mb-2">Data Analysis</h3>
+          <p class="text-gray-600">Turn data into insights with real-world tools. <strong>Get a Data Analysis Certificate!</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Internship Section -->
+  <section id="internship" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2 fade-in">
+          <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60" 
+               alt="Internship" class="rounded-xl shadow-lg hover:scale-105 transition duration-500">
+        </div>
+        <div class="md:w-1/2 fade-in">
+          <h2 class="text-3xl font-poppins font-bold mb-6">Land a <span class="text-[var(--novaspire)]">Paid Internship</span> 💼</h2>
+          <p class="text-gray-600 mb-4">One <strong>top hustler</strong> gets a 2-month internship with <span class="font-bold text-[var(--novaspire)]">Quaducate</span>—working on <strong>real projects!</strong></p>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start">
+              <span class="text-[var(--novaspire)] mr-2">🔥</span> Selected by <strong>effort, not just grades</strong>.
+            </li>
+            <li class="flex items-start">
+              <span class="text-[var(--novaspire)] mr-2">🔥</span> Build your <strong>portfolio</strong>.
+            </li>
+            <li class="flex items-start">
+              <span class="text-[var(--novaspire)] mr-2">🔥</span> Get <strong>mentorship from pros</strong>.
+            </li>
+          </ul>
+          <a href="#register" class="bg-[var(--novaspire)] text-white px-6 py-3 rounded-full font-bold hover:bg-[var(--novaspire-dark)]">Show Me How →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificate Mockup -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-poppins font-bold mb-6 fade-in">Flex Your <span class="text-[var(--novaspire)]">Army Green Cert</span> 🎖️</h2>
+      <p class="text-gray-600 mb-12 max-w-2xl mx-auto fade-in">Every participant gets a <strong>digital/printable Novaspire certificate</strong>—no cap!</p>
+      <div class="fade-in">
+        <div class="bg-white p-8 rounded-xl shadow-xl inline-block border-4 border-[var(--novaspire)] transform rotate-2 hover:rotate-0 transition">
+          <div class="text-[var(--novaspire)] font-poppins font-bold text-2xl mb-2">NOVASPIRE TECH BOOTCAMP</div>
+          <div class="text-gray-500 mb-4">Certificate of Completion</div>
+          <div class="text-xl font-bold mb-6">Awarded to: <span class="text-[var(--novaspire)]">[Your Name]</span></div>
+          <div class="text-gray-600">For crushing the 7-day tech hustle!</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Novaspire -->
+  <section id="why" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-poppins font-bold text-center mb-4 fade-in">Why <span class="text-[var(--novaspire)]">Novaspire</span> Rocks 🚀</h2>
+      <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto fade-in">We’re not just another course—we’re your <strong>tech tribe!</strong></p>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition fade-in">
+          <div class="text-[var(--novaspire)] text-4xl mb-4">🆓</div>
+          <h3 class="font-poppins font-bold text-xl mb-2">Free Week</h3>
+          <p class="text-gray-600">Test-drive tech for <strong>7 days, no kobo</strong>.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition fade-in" style="transition-delay: 0.1s;">
+          <div class="text-[var(--novaspire)] text-4xl mb-4">🎓</div>
+          <h3 class="font-poppins font-bold text-xl mb-2">Certificates</h3>
+          <p class="text-gray-600">Army green, <strong>digital/printable</strong> cert for all.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition fade-in" style="transition-delay: 0.2s;">
+          <div class="text-[var(--novaspire)] text-4xl mb-4">💼</div>
+          <h3 class="font-poppins font-bold text-xl mb-2">Internship</h3>
+          <p class="text-gray-600">One hustler gets a <strong>paid gig</strong> with Quaducate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parent’s Corner -->
+  <section id="parents" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2 fade-in">
+          <h2 class="text-3xl font-poppins font-bold mb-6">Parent’s Corner 👨‍👩‍👧‍👦</h2>
+          <p class="text-gray-600 mb-4">We know you want the <strong>best future</strong> for your child. Here’s why Novaspire is <span class="text-[var(--novaspire)] font-bold">worth it</span>:</p>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start">
+              <span class="text-[var(--novaspire)] mr-2">📈</span> <strong>25% growth</strong> in tech jobs by 2025.
+            </li>
+            <li class="flex items-start">
+              <span class="text-[var(--novaspire)] mr-2">🎓</span> <strong>Certificate</strong> to boost their CV.
+            </li>
+            <li class="flex items-start">
+              <span class="text-[var(--novaspire)] mr-2">🔒</span> <strong>Safe online</strong> learning with trusted platforms.
+            </li>
+          </ul>
+          <a href="[WhatsApp TBD]" class="bg-[var(--novaspire)] text-white px-6 py-3 rounded-full font-bold hover:bg-[var(--novaspire-dark)]">Talk to Us →</a>
+        </div>
+        <div class="md:w-1/2 fade-in">
+          <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60" 
+               alt="Parents and teen" class="rounded-xl shadow-lg">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Bites -->
+  <section id="bites" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-poppins font-bold text-center mb-4 fade-in">Tech Bites <span class="text-[var(--novaspire)]">to Hype You Up</span> 🔥</h2>
+      <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto fade-in">Quick tips to get you <strong>coding like a pro</strong>.</p>
+      <div class="max-w-3xl mx-auto">
+        <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition fade-in">
+          <h3 class="font-poppins font-bold text-xl mb-2">Build a Website in 1 Hour with HTML</h3>
+          <p class="text-gray-600 mb-4">Yo, want a website that slaps? Start with HTML—it’s the backbone of the web. In one hour, you can code a simple page with a header, image, and links. Use <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, and <code>&lt;body&gt;</code> tags, toss in some text, and boom—you’re live. Try it in the free week! <strong>#TechTribe</strong></p>
+          <a href="[WhatsApp TBD]" class="text-[var(--novaspire)] font-bold hover:underline">Get More Tips →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tribe Spotlight -->
+  <section id="spotlight" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-poppins font-bold text-center mb-4 fade-in">Tech Tribe <span class="text-[var(--novaspire)]">Spotlight</span> 🌟</h2>
+      <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto fade-in">Big ups to our <strong>hustlers</strong> killing it!</p>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-xl transition fade-in">
+          <h3 class="font-poppins font-bold text-xl mb-2">Tolu’s Webpage</h3>
+          <p class="text-gray-600">Tolu built a <strong>fire webpage</strong> in our Frontend course—complete with animations! <strong>#TechTribe</strong></p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-xl transition fade-in" style="transition-delay: 0.1s;">
+          <h3 class="font-poppins font-bold text-xl mb-2">Amaka’s App Design</h3>
+          <p class="text-gray-600">Amaka’s <strong>UI/UX app mockup</strong> was so slick, it could launch tomorrow! <strong>#TechTribe</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-poppins font-bold text-center mb-12 fade-in">FAQs ❓</h2>
+      <div class="max-w-2xl mx-auto space-y-4">
+        <div class="bg-white p-6 rounded-xl shadow-md fade-in">
+          <h3 class="font-bold text-lg flex items-center">
+            <span class="text-[var(--novaspire)] mr-2">👉</span> Is this really free?
+          </h3>
+          <p class="mt-2 text-gray-600">Yes! The <strong>first week is 100% free</strong>. After that, paid courses start at ₦50k.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md fade-in" style="transition-delay: 0.1s;">
+          <h3 class="font-bold text-lg flex items-center">
+            <span class="text-[var(--novaspire)] mr-2">👉</span> How do I get the internship?
+          </h3>
+          <p class="mt-2 text-gray-600">Hustle hard! <strong>Complete projects</strong>, engage in class, and show your skills. No exam—just effort.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md fade-in" style="transition-delay: 0.2s;">
+          <h3 class="font-bold text-lg flex items-center">
+            <span class="text-[var(--novaspire)] mr-2">👉</span> What if I miss a class?
+          </h3>
+          <p class="mt-2 text-gray-600">Recordings shared in the <strong>Tech Tribe WhatsApp group</strong>.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md fade-in" style="transition-delay: 0.3s;">
+          <h3 class="font-bold text-lg flex items-center">
+            <span class="text-[var(--novaspire)] mr-2">👉</span> Is payment safe?
+          </h3>
+          <p class="mt-2 text-gray-600">100%! We use <strong>Paystack/Flutterwave</strong> for secure payments post-free week.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="register" class="py-20 bg-[var(--novaspire)] text-white text-center">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-poppins font-bold mb-6 fade-in">Ready to <span class="text-yellow-400">Level Up?</span></h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto fade-in">Join <strong>1,243+ students</strong> in the Tech Tribe!</p>
+      <a href="[Google Form TBD]" class="bg-yellow-400 text-[var(--novaspire-dark)] px-8 py-4 rounded-full font-bold hover:bg-yellow-300 text-lg animate__animated animate__pulse animate__infinite fade-in">
+        🚀 Register Now (Free)
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[var(--novaspire-dark)] text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-6 md:mb-0">
+          <a href="#" class="text-2xl font-poppins font-bold flex items-center">
+            <span class="emoji-float">🚀</span> <span class="ml-2">Novaspire</span>
+          </a>
+          <p class="mt-2">Tech Tribe © 2025</p>
+        </div>
+        <div class="flex space-x-6">
+          <a href="[WhatsApp TBD]" class="hover:text-yellow-400">WhatsApp</a>
+          <a href="#" class="hover:text-yellow-400">Instagram</a>
+          <a href="#" class="hover:text-yellow-400">Email</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Countdown Timer (Placeholder - Needs Free Week Date)
+    function startCountdown() {
+      const countdownElement = document.getElementById('countdown');
+      const targetDate = new Date('2025-05-20T00:00:00'); // Placeholder: Replace with your free week start date
+      const updateCountdown = () => {
+        const now = new Date();
+        const diff = targetDate - now;
+        if (diff <= 0) {
+          countdownElement.innerHTML = 'Free Week Started!';
+          return;
+        }
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        document.getElementById('days').textContent = days.toString().padStart(2, '0');
+        document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+        document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+        document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+      };
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    }
+    startCountdown();
+
+    // Fade-In on Scroll
+    const fadeIns = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    fadeIns.forEach(el => observer.observe(el));
+
+    // Live Count Animation (Optional Hype)
+    const liveCount = document.getElementById('live-count');
+    let count = 1243;
+    setInterval(() => {
+      count += Math.floor(Math.random() * 3) + 1;
+      liveCount.textContent = count.toLocaleString();
+    }, 5000);
+  </script>
+</body>
+</html>
