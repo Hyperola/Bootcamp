@@ -104,22 +104,123 @@
     </div>
   </section>
 
-  <!-- Trusted By -->
-  <section class="py-16 bg-white">
-    <div class="container mx-auto px-4">
-      <h2 class="text-2xl font-poppins text-center mb-12 fade-in">Backed by the OGs:</h2>
-      <div class="flex flex-wrap justify-center items-center gap-12 fade-in">
-        <img src="jflash.jpg" alt="J Flash" class="h-12 hover:scale-105 transition">
-        <img src="Quaducate.jpeg" alt="Quaducate" class="h-12 hover:scale-105 transition">
-        <img src="https://via.placeholder.com/150x60/4B7043/FFFFFF?text=Fabulous" alt="Fabulous" class="h-12 hover:scale-105 transition">
-        <img src="deovaze.jpg" alt="Deovaze" class="h-12 hover:scale-105 transition">
-        <img src="kike.jpg" alt="Kike's Collection" class="h-12 hover:scale-105 transition">
-        <img src="https://via.placeholder.com/150x60/4B7043/FFFFFF?text=Quaducate" alt="Jade Fx" class="h-12 hover:scale-105 transition">
-        <img src="itec.jpg" alt="Itec" class="h-12 hover:scale-105 transition">
+<!-- Ultra-Visible Trusted By Section -->
+<section class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-poppins font-bold text-center mb-4">
+      <span class="text-[var(--novaspire)]">Backed</span> by the 
+      <span class="relative inline-block">
+        <span class="z-10 relative">Tech Elite</span>
+        <span class="absolute bottom-0 left-0 w-full h-2 bg-yellow-400 z-0 opacity-40"></span>
+      </span>
+    </h2>
+    <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Partners who believe in our mission to empower young techies</p>
+
+    <!-- Animated Logo Carousel -->
+    <div class="relative group">
+      <div class="flex overflow-x-auto py-6 hide-scrollbar space-x-8 px-4">
+        <!-- Logo Items -->
+        <div class="flex-shrink-0 logo-card">
+          <img src="jflash.jpg" alt="J Flash" class="h-16 grayscale hover:grayscale-0 transition-all duration-300">
+        </div>
+        <div class="flex-shrink-0 logo-card">
+          <img src="Quaducate.jpeg" alt="Quaducate" class="h-16 grayscale hover:grayscale-0 transition-all duration-300">
+        </div>
+        <div class="flex-shrink-0 logo-card">
+          <img src="cortia.jpg" alt="Cortia" class="h-16 grayscale hover:grayscale-0 transition-all duration-300">  
+        </div>
+        <div class="flex-shrink-0 logo-card">
+          <img src="deovaze.jpg" alt="Deovaze" class="h-16 grayscale hover:grayscale-0 transition-all duration-300">
+        </div>
+        <div class="flex-shrink-0 logo-card">
+          <img src="kike.jpg" alt="Kike's Collection" class="h-16 grayscale hover:grayscale-0 transition-all duration-300">
+        </div>
+        <div class="flex-shrink-0 logo-card">
+          <img src="jade-fx-logo.png" alt="Jade Fx" class="h-16 grayscale hover:grayscale-0 transition-all duration-300">
+        </div>
+        <div class="flex-shrink-0 logo-card">
+          <img src="itec.jpg" alt="Itec" class="h-16 grayscale hover:grayscale-0 transition-all duration-300">
+        </div>
+      </div>
+      
+      <!-- Gradient Fades -->
+      <div class="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-gray-50 to-transparent pointer-events-none"></div>
+      <div class="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-gray-50 to-transparent pointer-events-none"></div>
+    </div>
+
+    <!-- Trust Badges - Animated -->
+    <div class="flex flex-wrap justify-center gap-4 mt-12">
+      <div class="trust-badge animate-bounce">
+        <div class="w-4 h-4 bg-green-500 rounded-full mr-2"></div>
+        <span>1K+ Students</span>
+      </div>
+      <div class="trust-badge animate-bounce" style="animation-delay: 0.2s">
+        <div class="w-4 h-4 bg-blue-500 rounded-full mr-2"></div>
+        <span>Verified Payments</span>
+      </div>
+      <div class="trust-badge animate-bounce" style="animation-delay: 0.4s">
+        <div class="w-4 h-4 bg-purple-500 rounded-full mr-2"></div>
+        <span>Active Community</span>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
+<style>
+  /* Custom Styles */
+  .logo-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    min-width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(75, 112, 67, 0.2);
+    border: 1px solid var(--novaspire);
+  }
+  
+  .trust-badge {
+    background: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .trust-badge:hover {
+    transform: scale(1.05);
+    background: var(--novaspire);
+    color: white;
+  }
+  
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+  
+  .animate-bounce {
+    animation: bounce 2s infinite;
+  }
+</style>
   <!-- Countdown Timer -->
   <section class="py-12 bg-gradient-to-r from-[var(--novaspire-dark)] to-[var(--novaspire)] text-white">
     <div class="container mx-auto px-4 text-center">
