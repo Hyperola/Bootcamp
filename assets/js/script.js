@@ -54,6 +54,8 @@ const countdown = () => {
 setInterval(countdown, 1000);
 countdown(); // Run on page load
 
+
+
 // === FAKE LIVE COUNTER ===
 setInterval(() => {
   const counter = document.getElementById("live-count");
