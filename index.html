@@ -326,7 +326,7 @@
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     
     if (!prefersReducedMotion.matches) {
-      let speed = 0.5; // pixels per frame
+      let speed = 1.0; // pixels per frame
       let lastTime;
       
       const animate = (time) => {
